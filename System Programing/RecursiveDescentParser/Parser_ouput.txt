@@ -1,0 +1,17 @@
+Enter the string for validation
+a*b+c
+E->TE'
+T -> FT'
+F->id
+T'->epsilon
+E'->*TE'
+T -> FT'
+F->id
+T'->+FT'
+F->id
+T'->epsilon
+E'->epsilon
+Accepted
+
+Process returned 0 (0x0)   execution time : 5.374 s
+Press any key to continue.

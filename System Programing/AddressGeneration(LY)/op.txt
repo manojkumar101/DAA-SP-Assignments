@@ -1,0 +1,26 @@
+newsense@NewSense-PC:~/Desktop/Codes/SP$ yacc -d yacc1.y
+newsense@NewSense-PC:~/Desktop/Codes/SP$ lex lex1.l
+newsense@NewSense-PC:~/Desktop/Codes/SP$ gcc y.tab.c lex.yy.c -w -o add
+newsense@NewSense-PC:~/Desktop/Codes/SP$ ./add
+
+Enter the Expression: a=b+10;
+
+
+	 THREE ADDRESS CODE
+
+B : = 	b	+	B	
+C : = 	a	=	B	
+
+
+	 QUADRAPLE CODE
+
+0	+	b	E	E
+1	=	a	B	F
+
+
+	 TRIPLE CODE
+
+0	+	b	H	
+1	=	a	0
+newsense@NewSense-PC:~/Desktop/Codes/SP$ 
+

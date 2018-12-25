@@ -1,0 +1,242 @@
+Enter number of cities :: 5
+Enter the edges (1 to continue and 0 if done)
+Enter source, dest and weight for edge number 1 :: 1 2 20
+Continue(1/0) :: 1
+Enter source, dest and weight for edge number 2 :: 1 3 30
+Continue(1/0) :: 1
+Enter source, dest and weight for edge number 3 :: 1 4 10
+Continue(1/0) :: 1
+Enter source, dest and weight for edge number 4 :: 1 5 11
+Continue(1/0) :: 1
+Enter source, dest and weight for edge number 5 :: 2 1 15
+Continue(1/0) :: 1
+Enter source, dest and weight for edge number 6 :: 2 3 16
+Continue(1/0) :: 1
+Enter source, dest and weight for edge number 7 :: 2 4 4
+Continue(1/0) :: 1
+Enter source, dest and weight for edge number 8 :: 2 5 2
+Continue(1/0) :: 1
+Enter source, dest and weight for edge number 9 :: 3 1 3
+Continue(1/0) :: 1
+Enter source, dest and weight for edge number 10 :: 3 2 5
+Continue(1/0) :: 1
+Enter source, dest and weight for edge number 11 :: 3 4 2
+Continue(1/0) :: 1
+Enter source, dest and weight for edge number 12 :: 3 5 4
+Continue(1/0) :: 1
+Enter source, dest and weight for edge number 13 :: 4 1 19
+Continue(1/0) :: 1
+Enter source, dest and weight for edge number 14 :: 4 2 6
+Continue(1/0) :: 1
+Enter source, dest and weight for edge number 15 :: 4 3 18
+Continue(1/0) :: 1
+Enter source, dest and weight for edge number 16 :: 4 5 3
+Continue(1/0) :: 1
+Enter source, dest and weight for edge number 17 :: 5 1 16
+Continue(1/0) :: 1
+Enter source, dest and weight for edge number 18 :: 5 2 4
+Continue(1/0) :: 1
+Enter source, dest and weight for edge number 19 :: 5 3 7
+Continue(1/0) :: 1
+Enter source, dest and weight for edge number 20 :: 5 4 16
+Continue(1/0) :: 0
+--------------------------------
+For root node 1
+root->city :: 1
+root->levelno :: 1
+
+RCM
+~ 20 30 10 11
+15 ~ 16 4 2
+3 5 ~ 2 4
+19 6 18 ~ 3
+16 4 7 16 ~
+
+root->cost :: 25
+--------------------------------
+Path array --> Currently at root
+
+For node 2
+child->city :: 2
+child->levelno :: 2
+
+RCM
+~ ~ ~ ~ ~
+~ ~ 11 2 0
+0 ~ ~ 0 2
+15 ~ 12 ~ 0
+11 ~ 0 12 ~
+
+cost(2)=E->cost+reduced_cost(1)+parent->RCM[0][1]
+cost(2)=25+0+10
+cost(2)=35
+--------------------------------
+Path array --> Currently at root
+
+For node 3
+child->city :: 3
+child->levelno :: 2
+
+RCM
+~ ~ ~ ~ ~
+1 ~ ~ 2 0
+~ 3 ~ 0 2
+4 3 ~ ~ 0
+0 0 ~ 12 ~
+
+cost(3)=E->cost+reduced_cost(2)+parent->RCM[0][2]
+cost(3)=25+11+17
+cost(3)=53
+--------------------------------
+Path array --> Currently at root
+
+For node 4
+child->city :: 4
+child->levelno :: 2
+
+RCM
+~ ~ ~ ~ ~
+12 ~ 11 ~ 0
+0 3 ~ ~ 2
+~ 3 12 ~ 0
+11 0 0 ~ ~
+
+cost(4)=E->cost+reduced_cost(3)+parent->RCM[0][3]
+cost(4)=25+0+0
+cost(4)=25
+--------------------------------
+Path array --> Currently at root
+
+For node 5
+child->city :: 5
+child->levelno :: 2
+
+RCM
+~ ~ ~ ~ ~
+10 ~ 9 0 ~
+0 3 ~ 0 ~
+12 0 9 ~ ~
+~ 0 0 12 ~
+
+cost(5)=E->cost+reduced_cost(4)+parent->RCM[0][4]
+cost(5)=25+5+1
+cost(5)=31
+--------------------------------
+Path array --> 4 7283121
+
+For node 2
+child->city :: 2
+child->levelno :: 3
+
+RCM
+~ ~ ~ ~ ~
+~ ~ 11 ~ 0
+0 ~ ~ ~ 2
+~ ~ ~ ~ ~
+11 ~ 0 ~ ~
+
+cost(2)=E->cost+reduced_cost(1)+parent->RCM[3][1]
+cost(2)=25+0+3
+cost(2)=28
+--------------------------------
+Path array --> 4 7283121
+
+For node 3
+child->city :: 3
+child->levelno :: 3
+
+RCM
+~ ~ ~ ~ ~
+1 ~ ~ ~ 0
+~ 1 ~ ~ 0
+~ ~ ~ ~ ~
+0 0 ~ ~ ~
+
+cost(3)=E->cost+reduced_cost(2)+parent->RCM[3][2]
+cost(3)=25+13+12
+cost(3)=50
+--------------------------------
+Path array --> 4 7283121
+
+For node 5
+child->city :: 5
+child->levelno :: 3
+
+RCM
+~ ~ ~ ~ ~
+1 ~ 0 ~ ~
+0 3 ~ ~ ~
+~ ~ ~ ~ ~
+~ 0 0 ~ ~
+
+cost(5)=E->cost+reduced_cost(4)+parent->RCM[3][4]
+cost(5)=25+11+0
+cost(5)=36
+--------------------------------
+Path array --> 2 4
+
+For node 3
+child->city :: 3
+child->levelno :: 4
+
+RCM
+~ ~ ~ ~ ~
+~ ~ ~ ~ ~
+~ ~ ~ ~ 0
+~ ~ ~ ~ ~
+0 ~ ~ ~ ~
+
+cost(3)=E->cost+reduced_cost(2)+parent->RCM[1][2]
+cost(3)=28+13+11
+cost(3)=52
+--------------------------------
+Path array --> 2 4
+
+For node 5
+child->city :: 5
+child->levelno :: 4
+
+RCM
+~ ~ ~ ~ ~
+~ ~ ~ ~ ~
+0 ~ ~ ~ ~
+~ ~ ~ ~ ~
+~ ~ 0 ~ ~
+
+cost(5)=E->cost+reduced_cost(4)+parent->RCM[1][4]
+cost(5)=28+0+0
+cost(5)=28
+--------------------------------
+Path array --> 5 2 4
+
+For node 3
+child->city :: 3
+child->levelno :: 5
+
+RCM
+~ ~ ~ ~ ~
+~ ~ ~ ~ ~
+~ ~ ~ ~ ~
+~ ~ ~ ~ ~
+~ ~ ~ ~ ~
+
+cost(3)=E->cost+reduced_cost(2)+parent->RCM[4][2]
+cost(3)=28+0+0
+cost(3)=28
+--------------------------------
+The node 2 gets killed because 35>28
+
+The node 5 gets killed because 31>28
+
+The node 3 gets killed because 53>28
+
+The node 3 gets killed because 52>28
+
+The node 5 gets killed because 36>28
+
+The node 3 gets killed because 50>28
+
+PATH --> 1 -> 4 -> 2 -> 5 -> 3 -> 1
+
+Process returned 0 (0x0)   execution time : 281.645 s
+Press any key to continue.

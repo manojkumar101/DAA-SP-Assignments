@@ -1,0 +1,142 @@
+
+N-Queen Problem using Backtracking
+1.Iterative Solution
+2.Recursive Solution
+3.Exit
+
+Enter your choice::1
+
+N-Queen Problem using Iterative Algorithm
+1.Print All Solutions
+2.Print Single Solution
+3.Return to main menu
+
+Enter your choice::1
+
+Enter the number of queens::4
+
+Solution number 1 for 4-Queen Problem ->
+----------
+| |Q| | |
+----------
+| | | |Q|
+----------
+|Q| | | |
+----------
+| | |Q| |
+----------
+
+Solution number 2 for 4-Queen Problem ->
+----------
+| | |Q| |
+----------
+|Q| | | |
+----------
+| | | |Q|
+----------
+| |Q| | |
+----------
+
+The total number of solutions in 4-Queen Problem is 2
+
+N-Queen Problem using Iterative Algorithm
+1.Print All Solutions
+2.Print Single Solution
+3.Return to main menu
+
+Enter your choice::3
+
+N-Queen Problem using Backtracking
+1.Iterative Solution
+2.Recursive Solution
+3.Exit
+
+Enter your choice::2
+
+N-Queen Problem using Recursive Algorithm
+1.Print All Solutions
+2.Print Single Solution
+3.Return to main menu
+
+Enter your choice::1
+
+Enter the number of queens::6
+
+Solution number 1 for 6-Queen Problem ->
+--------------
+| |Q| | | | |
+--------------
+| | | |Q| | |
+--------------
+| | | | | |Q|
+--------------
+|Q| | | | | |
+--------------
+| | |Q| | | |
+--------------
+| | | | |Q| |
+--------------
+
+Solution number 2 for 6-Queen Problem ->
+--------------
+| | |Q| | | |
+--------------
+| | | | | |Q|
+--------------
+| |Q| | | | |
+--------------
+| | | | |Q| |
+--------------
+|Q| | | | | |
+--------------
+| | | |Q| | |
+--------------
+
+Solution number 3 for 6-Queen Problem ->
+--------------
+| | | |Q| | |
+--------------
+|Q| | | | | |
+--------------
+| | | | |Q| |
+--------------
+| |Q| | | | |
+--------------
+| | | | | |Q|
+--------------
+| | |Q| | | |
+--------------
+
+Solution number 4 for 6-Queen Problem ->
+--------------
+| | | | |Q| |
+--------------
+| | |Q| | | |
+--------------
+|Q| | | | | |
+--------------
+| | | | | |Q|
+--------------
+| | | |Q| | |
+--------------
+| |Q| | | | |
+--------------
+
+The total number of solutions in 6-Queen Problem is 4
+
+N-Queen Problem using Recursive Algorithm
+1.Print All Solutions
+2.Print Single Solution
+3.Return to main menu
+
+Enter your choice::3
+
+N-Queen Problem using Backtracking
+1.Iterative Solution
+2.Recursive Solution
+3.Exit
+
+Enter your choice::3
+
+Process returned 3 (0x3)   execution time : 55.978 s
+Press any key to continue.

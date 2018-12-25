@@ -1,0 +1,8 @@
+newsense@NewSense-PC:~/Desktop/Codes/SP$ yacc -d calcy_yacc.y
+newsense@NewSense-PC:~/Desktop/Codes/SP$ lex calcy_lex.l 
+newsense@NewSense-PC:~/Desktop/Codes/SP$ gcc y.tab.c lex.yy.c -lm -w -o calc
+newsense@NewSense-PC:~/Desktop/Codes/SP$ ./calc
+3+4
+7.000000
+newsense@NewSense-PC:~/Desktop/Codes/SP$ 
+
